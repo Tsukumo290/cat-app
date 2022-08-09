@@ -1,0 +1,22 @@
+<div class="my-page-contents">
+  <div class="my-page-up">
+
+    <% if current_user.image? %>
+      <div class="my-icon"><%= image_tag current_user.image.url %></div>
+    <% else %>
+      <div class="my-icon"><%= image_tag("default.png") %></div>
+    <% end %>
+
+    <div class="my-page-status">
+      <div class="my-page-menu">
+        <div class="my-nickname"><%= current_user.nickname %></div>
+        <div class="profile-edit"><%= link_to "プロフィールを編集", edit_user_path(current_user) %></div>
+      </div>
+      <div class="my-posts-length"><%= "投稿#{@posts.length}件" %></div>
+    </div>
+  </div>
+
+  <div class="my-page-under">
+
+  </div>
+</div>
