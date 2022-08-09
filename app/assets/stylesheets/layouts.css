@@ -15,6 +15,7 @@
   height: calc(100vh - 60px - 60px);
   width: 100vw;
   background-color: white;
+  overflow: scroll;
 }
 .footer {
   height: 60px;

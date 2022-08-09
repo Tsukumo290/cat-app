@@ -1,1 +1,12 @@
-<div class="name"><%= link_to current_user.nickname, edit_user_path(current_user) %></div>
+<div class="posts">
+  <% @posts.each do |post| %>
+    <div><%#= post.user.nickname %></div>
+    <div><%#= image_tag post.image.variant(resize: '500x500') %></div>
+    <div><%#= post.user.nickname %></div>
+    <div><%= post.title %></div>
+    <div><%= post.content %></div>
+  <% end %>
+</div>
+<div class="current_user-posts">
+  <%= link_to current_user.nickname, edit_user_path(current_user) %>
+</div>
