@@ -2,15 +2,10 @@
     <div class="new-title">新規投稿を作成</div>
     <div class="new-form">
       <%= form_with(model: @post, local: true) do |form| %>
-        <div class="image-preview">
-          <div id="preview"></div>
-          <div id="preview-none"><%= image_tag @post.image %></div>
-          <div class="image-form"><%= form.file_field :image %></div>
-        </div>
         <div><%= form.file_field :image %></div>
         <div><%= form.text_field :title, placeholder: "Title" %></div>
         <div><%= form.text_area :content, placeholder: "text" %></div>
-        <div><%= form.text_field :tag_ids, placeholder: "タグを複数つけるには','で区切ってください。" %></div>
+        <div><%= form.text_field :tag_ids, value: @tag_list, placeholder: "タグを複数つけるには','で区切ってください。" %></div>
         <div><%= form.submit "SEND" %></div>
       <% end %>
     </div>

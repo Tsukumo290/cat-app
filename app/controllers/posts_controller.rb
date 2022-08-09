@@ -11,10 +11,28 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
+    tag_list = params[:post][:tag_ids].split(',')
     if @post.save
+      @post.save_tags(tag_list)
       redirect_to root_path
     else
       render :new
+    end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+    @tag_list = @post.tags.pluck(:name).join(",")
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    tag_list = params[:post][:tag_ids].split(',')
+    if @post.update(post_params)
+      @post.save_tags(tag_list)
+      redirect_to root_path
+    else
+      render :edit
     end
   end
 

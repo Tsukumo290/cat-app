@@ -17,6 +17,11 @@
         <div class="index-content">
           <%= safe_join(post.content.split("\n"),tag(:br)) %>
         </div>
+        <div class="index-tags">
+        <% post.tags.each do |tag| %>
+          <%= "##{tag.name}" %>
+        <% end %>
+        </div>
       </div>
     <% end %>
   </div>
