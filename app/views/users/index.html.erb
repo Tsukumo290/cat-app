@@ -16,7 +16,13 @@
     </div>
   </div>
 
-  <div class="my-page-under">
+  <div class="my-posts-title-menu">
+    <div class="my-posts-title-one">投稿</div>
+  </div>
 
+  <div class="my-page-under">
+    <% @posts.each do |post| %>
+      <div class="my-page-posts-image"><%= image_tag post.image %></div>
+    <% end %>
   </div>
 </div>

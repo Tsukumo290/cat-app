@@ -4,7 +4,7 @@
 }
 .my-page-up {
   display: flex;
-  height: 220px;
+  height: 225px;
   padding: 30px 0 0 70px;
   border-bottom: 1px solid lightgray;
 }
@@ -15,4 +15,24 @@
 }
 .my-page-menu {
   display: flex;
+}
+.my-posts-title-menu {
+  height: 53px;
+  padding-left: 445px;
+}
+.my-posts-title-one {
+  padding-top: 13px;
+  display: inline-block;
+  border-top: 1px solid gray;
+}
+.my-page-posts-image {
+  display: inline-block;
+  margin-left: 11px;
+  margin-bottom: 17px;
+}
+.my-page-posts-image img {
+  height: 293px;
+  width: 293px;
+  object-fit: cover;
+  vertical-align: middle;
 }
