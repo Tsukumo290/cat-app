@@ -1,12 +1,14 @@
-<div class="post-contents">
+<div class="index-post-contents">
 
-  <div class="posts">
+  <div class="index-posts">
     <% @posts.each do |post| %>
-      <div><%= post.user.nickname %></div>
+      <div class="index-post">
+      <div class="index-nickname_one"><%= post.user.nickname %></div>
       <div class="index-image"><%= image_tag post.image %></div>
-      <div><%= post.user.nickname %></div>
-      <div><%= post.title %></div>
-      <div><%= post.content %></div>
+      <div class="index-nickname_two"><%= post.user.nickname %></div>
+      <div class="index-title"><%= post.title %></div>
+      <div class="index-content"><%= post.content %></div>
+      </div>
     <% end %>
   </div>
 
