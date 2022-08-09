@@ -61,3 +61,41 @@
   font-weight: bold;
   border-bottom: 1px solid lightgray;
 }
+.new-form {
+  padding: 20px;
+}
+.new-form input {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 50px;
+  padding: 10px;
+}
+.new-form textarea {
+  width: 100%;
+  margin-bottom: 4px;
+  height: 200px;
+  padding: 10px;
+}
+.image-preview {
+  display: flex;
+}
+#previews img {
+  height:270px;
+  width: 270px;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+#preview-none img {
+  height:270px;
+  width: 270px;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+.image-form {
+  display: flex;
+  align-items: flex-end;
+
+  margin-left: 10px;
+}
