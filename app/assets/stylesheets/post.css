@@ -5,7 +5,7 @@
   margin-top: 24px;
 }
 .index-posts {
-  width: 470px;
+  width: 471px;
 }
 .index-post {
   background-color: #fff;
@@ -13,8 +13,15 @@
   border: 1px solid lightgray;
   border-radius: 10px;
 }
-.index-nickname_one {
+.index-icon-nickname {
+  display: flex;
   height: 60px;
+  padding: 13px 0 0 13px;
+}
+.index-icon img{
+  height: 34px;
+  width: 34px;
+  border-radius: 17px;
 }
 .index-image img {
   height: 470px;
@@ -25,4 +32,12 @@
 
 .current_user-posts {
   margin-left: 50px;
+}
+.current_user-icon-nickname {
+  display: flex;
+}
+.current_user-icon img {
+  height: 55px;
+  width: 55px;
+  border-radius: 27.5px;
 }

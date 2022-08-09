@@ -3,19 +3,33 @@
   <div class="index-posts">
     <% @posts.each do |post| %>
       <div class="index-post">
-        <div class="index-nickname_one"><%= post.user.nickname %></div>
+        <div class="index-icon-nickname">
+          <% if post.user.image? %>
+            <div class="index-icon"><%= image_tag post.user.image.url %></div>
+          <% else %>
+            <div class="index-icon"><%= image_tag("default.png") %></div>
+          <% end %>
+          <div class="index-nickname_one"><%= post.user.nickname %></div>
+        </div>
         <div class="index-image"><%= image_tag post.image %></div>
         <div class="index-nickname_two"><%= post.user.nickname %></div>
         <div class="index-title"><%= post.title %></div>
         <div class="index-content">
-          <%= safe_join(post.content.split("\n"),tag(:br)).truncate(20) %>
+          <%= safe_join(post.content.split("\n"),tag(:br)) %>
         </div>
       </div>
     <% end %>
   </div>
 
   <div class="current_user-posts">
-    <div><%= link_to current_user.nickname, edit_user_path(current_user) %></div>
+    <div class="current_user-icon-nickname">
+      <% if current_user.image? %>
+        <div class="current_user-icon"><%= image_tag current_user.image.url %></div>
+      <% else %>
+        <div class="current_user-icon"><%= image_tag("default.png") %></div>
+      <% end %>
+      <div><%= link_to current_user.nickname, edit_user_path(current_user) %></div>
+    </div>
     <% @my_posts.each do |my| %>
       <div>
       <%= my.title %>

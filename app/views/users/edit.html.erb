@@ -8,6 +8,9 @@
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: current_user, local: true do |f|%>
+        <div>
+          <%= f.file_field :image %>
+        </div>
         <div class='field'>
           <div class='field-label'>
             <%= f.label :nickname%>
