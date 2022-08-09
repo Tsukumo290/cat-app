@@ -8,8 +8,23 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  
+  <header class="header">
+    <div class="header-menu">
+      <div class="header-title">タイトル</div>
+      <div class="header-menu-right">
+        <a>新規投稿</a>
+        <a>マイページ</a>
+      </div>
+    </div>
+  </header>
 
   <body>
+    <div class="body">
     <%= yield %>
+    </div>
   </body>
+
+  <footer class="footer">
+  </footer>
 </html>
