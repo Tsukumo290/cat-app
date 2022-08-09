@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc)
+    @my_posts = Post.where(user_id: current_user.id).includes(:user).order(created_at: :desc).limit(5)
   end
 
   def new

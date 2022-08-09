@@ -3,17 +3,24 @@
   <div class="index-posts">
     <% @posts.each do |post| %>
       <div class="index-post">
-      <div class="index-nickname_one"><%= post.user.nickname %></div>
-      <div class="index-image"><%= image_tag post.image %></div>
-      <div class="index-nickname_two"><%= post.user.nickname %></div>
-      <div class="index-title"><%= post.title %></div>
-      <div class="index-content"><%= post.content %></div>
+        <div class="index-nickname_one"><%= post.user.nickname %></div>
+        <div class="index-image"><%= image_tag post.image %></div>
+        <div class="index-nickname_two"><%= post.user.nickname %></div>
+        <div class="index-title"><%= post.title %></div>
+        <div class="index-content">
+          <%= safe_join(post.content.split("\n"),tag(:br)).truncate(20) %>
+        </div>
       </div>
     <% end %>
   </div>
 
   <div class="current_user-posts">
-    <%= link_to current_user.nickname, edit_user_path(current_user) %>
+    <div><%= link_to current_user.nickname, edit_user_path(current_user) %></div>
+    <% @my_posts.each do |my| %>
+      <div>
+      <%= my.title %>
+      </div>
+    <% end %>
   </div>
 
 </div>
