@@ -3,7 +3,7 @@
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
 | nickname           | string | null: false |
-| self               | text   |             |
+| profile            | text   |             |
 | email              | string | null: false |
 | encrypted_password | string | null: false |
 
