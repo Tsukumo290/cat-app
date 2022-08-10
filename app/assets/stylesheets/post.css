@@ -108,10 +108,29 @@
   margin: 24px auto 0;
   display: flex;
   border: 1px solid lightgray;
+  border-radius: 0 7px 7px 0;
 }
 .post-show-left img {
   height: 775px;
   width: 675px;
   object-fit: cover;
   vertical-align: middle;
+}
+
+.post-show-right {
+  height: 100%;
+  width: 505px;
+}
+.show-icon-nickname {
+  display: flex;
+  height: 60px;
+}
+.show-icon img {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.one {
+  border-bottom: 1px solid lightgray;
 }

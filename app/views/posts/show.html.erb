@@ -5,7 +5,28 @@
   </div>
 
   <div class="post-show-right">
-    <div><%= @post.user.nickname %></div>
+    <div class="show-icon-nickname one">
+      <% if @post.user.image? %>
+        <div class="show-icon"><%= image_tag @post.user.image.url %></div>
+      <% else %>
+        <div class="show-icon"><%= image_tag("default.png") %></div>
+      <% end %>
+      <div class="show-nickname_one"><%= @post.user.nickname %></div>
+      <% if current_user.id == @post.user.id %>
+        <div class="show-edit-delete">
+          <%= link_to "編集する", edit_post_path(@post.id) %>
+          <%= link_to "削除する", post_path(@post.id), method: :delete %>
+        </div>
+      <% end %>
+    </div>
+    <div class="show-icon-nickname two">
+      <% if @post.user.image? %>
+        <div class="show-icon"><%= image_tag @post.user.image.url %></div>
+      <% else %>
+        <div class="show-icon"><%= image_tag("default.png") %></div>
+      <% end %>
+      <div class="show-nickname_one"><%= @post.user.nickname %></div>
+    </div>
     <div><%=  %></div>
     <div><%=  %></div>
     <div><%=  %></div>
