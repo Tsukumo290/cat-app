@@ -147,3 +147,12 @@
   object-fit: cover;
   vertical-align: middle;
 }
+.show-heart a {
+  text-decoration: none;
+  font-size: 30px;
+}
+.show-heart-two a {
+  text-decoration: none;
+  color: lightgray;
+  font-size: 30px;
+}
