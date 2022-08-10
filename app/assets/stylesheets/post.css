@@ -134,3 +134,16 @@
 .one {
   border-bottom: 1px solid lightgray;
 }
+.cat-image img {
+  position: absolute;
+  top: 350px;
+  height: 500px;
+  width: 500px;
+}
+.cat-image-two img {
+  position: absolute;
+  top: 640px;
+  right: 370px;
+  height: 230px;
+  width: 230px;
+}
