@@ -9,7 +9,7 @@
           <% else %>
             <div class="index-icon"><%= image_tag("default.png") %></div>
           <% end %>
-          <div class="index-nickname_one"><%= post.user.nickname %></div>
+          <div class="index-nickname_one"><%= link_to post.user.nickname, user_path(post.user.id) %></div>
         </div>
         <div class="index-image"><%= image_tag post.image %></div>
         <div class="index-nickname_two"><%= post.user.nickname %></div>
