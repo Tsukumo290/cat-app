@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_many  :tag_relationships, dependent: :destroy
   has_many  :tags, through: :tag_relationships
   has_many :favorites, dependent: :destroy
+  has_many :comments, dependent: :destroy 
 
   has_one_attached :image
 
