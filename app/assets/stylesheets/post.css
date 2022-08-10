@@ -99,3 +99,19 @@
 
   margin-left: 10px;
 }
+
+/*postのshowページのcss*/
+.post-show-content {
+  background-color: white;
+  height: 775px;
+  width: 1180px;
+  margin: 24px auto 0;
+  display: flex;
+  border: 1px solid lightgray;
+}
+.post-show-left img {
+  height: 775px;
+  width: 675px;
+  object-fit: cover;
+  vertical-align: middle;
+}
