@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many  :tag_relationships, dependent: :destroy
   has_many  :tags, through: :tag_relationships
+  has_many :favorites, dependent: :destroy
 
   has_one_attached :image
 
@@ -21,5 +22,9 @@ class Post < ApplicationRecord
       post_tag = Tag.find_or_create_by(name: new_name)
       self.tags << post_tag
     end
+  end
+
+  def favorite?(user)
+    favorites.where(user_id: user.id).exists?
   end
 end

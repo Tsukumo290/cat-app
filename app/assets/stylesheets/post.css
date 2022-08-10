@@ -44,6 +44,21 @@
   width: 55px;
   border-radius: 27.5px;
 }
+.cat-image img {
+  position: absolute;
+  top: 350px;
+  height: 500px;
+  width: 500px;
+  opacity: 0.8;
+}
+.cat-image-two img {
+  position: absolute;
+  top: 640px;
+  right: 370px;
+  height: 230px;
+  width: 230px;
+  opacity: 0.8;
+}
 
 /*postのnewページのcss*/
 .new-content {
@@ -124,28 +139,11 @@
 .show-icon-nickname {
   display: flex;
   height: 60px;
+  border-bottom: 1px solid lightgray;
 }
 .show-icon img {
   height: 30px;
   width: 30px;
   object-fit: cover;
   vertical-align: middle;
-}
-.one {
-  border-bottom: 1px solid lightgray;
-}
-.cat-image img {
-  position: absolute;
-  top: 350px;
-  height: 500px;
-  width: 500px;
-  opacity: 0.8;
-}
-.cat-image-two img {
-  position: absolute;
-  top: 640px;
-  right: 370px;
-  height: 230px;
-  width: 230px;
-  opacity: 0.8;
 }
