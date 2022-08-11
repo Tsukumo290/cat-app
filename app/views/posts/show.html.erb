@@ -28,12 +28,18 @@
         <div class="show-icon"><%= image_tag("default.png") %></div>
       <% end %>
       <div class="show-nickname-two"><%= @post.user.nickname %></div>
+      
       <div id="comments">
         <h4>＜コメント一覧＞</h4>
           <% @post.comments.each do |comment| %>
             <div class="comment">
               <p class="user-info"><%= comment.user.nickname %>： </p>
               <p><%= comment.content%></p>
+              <div class="comments-delete">
+                <%= link_to post_comment_path(@post.id, comment.id), method: :delete do %>
+                  <button>削除</button>
+                <% end %>
+              </div>
             </div>
           <% end %>
       </div>
