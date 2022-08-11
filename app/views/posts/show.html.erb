@@ -30,18 +30,7 @@
       <div class="show-nickname-two"><%= @post.user.nickname %></div>
       
       <div id="comments">
-        <h4>＜コメント一覧＞</h4>
-          <% @post.comments.each do |comment| %>
-            <div class="comment">
-              <p class="user-info"><%= comment.user.nickname %>： </p>
-              <p><%= comment.content%></p>
-              <div class="comments-delete">
-                <%= link_to post_comment_path(@post.id, comment.id), method: :delete do %>
-                  <button>削除</button>
-                <% end %>
-              </div>
-            </div>
-          <% end %>
+        <%= render 'comments/post_comments', post: @post %>
       </div>
 
     </div>
@@ -63,10 +52,7 @@
       <% end %>
 
       <div class="comment-form">
-        <%= form_with model: [@post, @comment], id: "comment-form" do |f| %>
-          <%= f.text_area :content , class: "comment-content", placeholder: "コメントをする"%>
-          <%= f.submit "投稿する", class: "comment-submit" %>
-        <% end %>
+        <%= render 'comments/form', post: @post, comment: @comment %>
       </div>
 
     </div>
