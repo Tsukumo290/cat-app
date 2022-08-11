@@ -1,12 +1,11 @@
-<h4>＜コメント一覧＞</h4>
-          <% post.comments.each do |comment| %>
-            <div class="comment">
-              <p class="user-info"><%= comment.user.nickname %>： </p>
-              <p><%= comment.content%></p>
-              <div class="comments-delete">
-                <%= link_to post_comment_path(post.id, comment.id), method: :delete, remote: true do %>
-                  <button>削除</button>
-                <% end %>
-              </div>
-            </div>
-          <% end %>
+<% post.comments.each do |comment| %>
+  <div class="comment">
+    <p class="user-info"><%= comment.user.nickname %>： </p>
+    <p><%= comment.content%></p>
+    <div class="comments-delete">
+      <%= link_to post_comment_path(post.id, comment.id), method: :delete, remote: true do %>
+        <button>削除</button>
+      <% end %>
+    </div>
+  </div>
+<% end %>

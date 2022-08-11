@@ -151,9 +151,31 @@
   text-decoration: none;
   font-size: 30px;
 }
-.show-heart-two a {
+.show-heart-none a {
   text-decoration: none;
   color: lightgray;
   font-size: 30px;
 }
-/*コメントのcss*/
+.show-contents-center {
+  height: calc(100% - 60px - 100px - 50px);
+}
+.favoriteーcontents {
+  height: 100px;
+  border-top: 1px solid lightgray;
+}
+.comment-contents {
+  height: 50px;
+  border-top: 1px solid lightgray;
+}
+
+.comment-form input {
+  height: 49px;
+  border: white;
+  background-color: white;
+}
+.comment-content {
+  width: 420px;
+}
+.comments-delete button {
+ 
+}

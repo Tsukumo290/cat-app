@@ -37,22 +37,27 @@
 
     <div class="show-contents-row">
 
-      <% if @post.favorite?(current_user) %>
-        <div class="show-heart">
-          <%= link_to post_favorites_path(@post.id), method: :delete do %>
-              <span style="color:rgb(255, 136, 136);">❤︎</span>
-          <% end %>
-        </div>
-      <% else %>
-        <div class="show-heart-two">
-          <%= link_to post_favorites_path(@post.id), method: :post do %>
-              <span>❤︎</span>
-          <% end %>
-        </div>
-      <% end %>
+      <div class="favoriteーcontents">
+        <% if @post.favorite?(current_user) %>
+          <div class="show-heart">
+            <%= link_to post_favorites_path(@post.id), method: :delete do %>
+                <span style="color:rgb(255, 136, 136);">❤︎</span>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="show-heart-none">
+            <%= link_to post_favorites_path(@post.id), method: :post do %>
+                <span>❤︎</span>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
 
-      <div class="comment-form">
-        <%= render 'comments/form', post: @post, comment: @comment %>
+
+      <div class="comment-contents">
+        <div class="comment-form">
+          <%= render 'comments/form', post: @post, comment: @comment %>
+        </div>
       </div>
 
     </div>

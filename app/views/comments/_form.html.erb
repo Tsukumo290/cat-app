@@ -1,4 +1,4 @@
 <%= form_with model: [post, comment] do |f| %>
-          <%= f.text_area :content , class: "comment-content", placeholder: "コメントをする"%>
-          <%= f.submit "投稿する", class: "comment-submit" %>
-        <% end %>
+  <%= f.text_field :content , class: "comment-content", placeholder: "コメントをする" %>
+  <%= f.submit "投稿する", class: "comment-submit" %>
+<% end %>
