@@ -28,6 +28,7 @@
   width: 470px;
   object-fit: cover;
   vertical-align: middle;
+  border-right: 1px solid lightgray;
 }
 .index-tags {
   color: rgb(0, 42, 94);
@@ -130,6 +131,7 @@
   width: 675px;
   object-fit: cover;
   vertical-align: middle;
+  border-right: 1px solid lightgray;
 }
 
 .post-show-right {
@@ -140,12 +142,26 @@
   display: flex;
   height: 60px;
   border-bottom: 1px solid lightgray;
+  padding: 12px;
+}
+.icon-nickname-right {
+  display: flex;
+  padding: 6px 20px 0 12px;
+}
+.show-edit-delete {
+  margin-left: 238px;
+}
+.show-edit-delete a {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
 }
 .show-icon img {
-  height: 30px;
-  width: 30px;
+  height: 32px;
+  width: 32px;
   object-fit: cover;
   vertical-align: middle;
+  border-radius: 16px;
 }
 .show-heart a {
   text-decoration: none;
@@ -158,6 +174,19 @@
 }
 .show-contents-center {
   height: calc(100% - 60px - 100px - 50px);
+  overflow: scroll;
+  display: flex;
+  padding: 12px 30px 0 12px;
+}
+.contents-center-right {
+  margin-left: 12px;
+  margin-top: 6px;
+}
+.show-tags {
+  color: rgb(0, 58, 129);
+}
+.show-time {
+  font-size: 13px;
 }
 .favoriteーcontents {
   height: 100px;
@@ -175,7 +204,5 @@
 }
 .comment-content {
   width: 420px;
-}
-.comments-delete button {
- 
+  padding-left: 10px;
 }
