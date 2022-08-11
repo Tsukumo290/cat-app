@@ -206,3 +206,10 @@
   width: 420px;
   padding-left: 10px;
 }
+.comment {
+  display: flex;
+}
+.comment button {
+  background-color: white;
+  border: white;
+}
