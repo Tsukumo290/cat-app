@@ -1,11 +1,16 @@
-<h1>検索ぺーじ</h1>
-<div>
-  <%= form_tag(search_post_path, method: :get) do %>
-  <%= text_field_tag :keyword %>
-  <%= submit_tag "検索" %>
-  <% end %>
-</div>
+<div class="search-post-contents">
+  <div class="search-post-up">
+    <%= form_tag(search_post_path, method: :get) do %>
+    <div class="search-post-form">
+      <div class="search-form-field"><%= text_field_tag :keyword, '',placeholder: "タグを入力してください" %></div>
+      <div class="search-form-submit"><%= submit_tag "検索" %></div>
+    </div>
+    <% end %>
+  </div>
 
-<% @posts.each do |post| %>
-  <%= post.title %>
-<% end %>
+  <div class="search-post-images">
+  <% @posts.each do |post| %>
+    <div class="search-post-image"><%= image_tag post.image %></div>
+  <% end %>
+  </div>
+</div>

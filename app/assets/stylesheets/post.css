@@ -213,3 +213,47 @@
   background-color: white;
   border: white;
 }
+
+/*search_postページのcss*/
+.search-post-contents {
+  width: 940px;
+  height: 100%;
+  margin: 0 auto;
+}
+.search-post-up {
+  height: 90px;
+  width: 100%;
+}
+.search-post-form {
+  height: 40px;
+  display: flex;
+  padding-top: 25px;
+  width: 300px;
+  margin: 0 auto;
+}
+.search-form-field input {
+  height: 40px;
+  width: 240px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 1px 0 0 1px;
+  padding-left: 10px;
+}
+.search-form-submit input {
+  height: 40px;
+  width: 60px;
+  border: 1px solid lightgray;
+  border-radius: 0 1px 1px 0;
+}
+
+.search-post-image {
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.search-post-image img {
+  height: 290px;
+  width: 290px;
+  object-fit: cover;
+  vertical-align: bottom;
+}
