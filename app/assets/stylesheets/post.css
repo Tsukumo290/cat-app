@@ -257,3 +257,12 @@
   object-fit: cover;
   vertical-align: bottom;
 }
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+}
+.top{
+  width:      50px;
+  height:     50px;
+}
