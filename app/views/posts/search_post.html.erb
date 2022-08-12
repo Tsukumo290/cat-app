@@ -10,7 +10,7 @@
 
   <div class="search-post-images">
   <% @posts.each do |post| %>
-    <div class="search-post-image"><%= image_tag post.image %></div>
+    <div class="search-post-image"><%=link_to image_tag(post.image), post_path(post.id) %></div>
   <% end %>
   </div>
 </div>
