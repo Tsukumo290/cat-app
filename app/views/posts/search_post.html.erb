@@ -1,0 +1,11 @@
+<h1>検索ぺーじ</h1>
+<div>
+  <%= form_tag(search_post_path, method: :get) do %>
+  <%= text_field_tag :keyword %>
+  <%= submit_tag "検索" %>
+  <% end %>
+</div>
+
+<% @posts.each do |post| %>
+  <%= post.title %>
+<% end %>

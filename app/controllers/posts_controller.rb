@@ -48,6 +48,14 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def search_post
+    if params[:keyword].present?
+      @posts = Tag.search(params[:keyword]).order('created_at DESC')
+    else
+      @posts = Post.order(created_at: :desc)
+    end
+  end
+
   private
   def post_params
     params.require(:post).permit(:title, :image, :content).merge(user_id: current_user.id)
